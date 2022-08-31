@@ -1,0 +1,55 @@
+@import '../absracts/mixins';
+@import '../absracts/variables';
+
+header {
+    width: 100vw;
+    height: 80px;
+    @include d-flex;
+    border-bottom: 1px solid #E5EBEF;
+    .nav {
+        width: 80%;
+        height: 100%;
+        @include d-flex;
+        &__pages-container {
+            height: 100%;
+            @include d-flex;
+            margin: 0 200px 0 50px;
+            text-align: center;
+        }
+        &__pages {
+            height: 100%;
+            @include d-flex;
+            text-align: center;
+            margin: 0 10px;
+            text-decoration: none;
+            color: $clr-dark-grey;
+        }
+        .active {
+            color: $clr-orange;
+            border-bottom: 3px solid $clr-orange;
+            font-weight: bold;
+        }
+        &__currency-container {
+            margin-right: 50px;
+        }
+        &__currency {
+            border: 1px solid $clr-blue;
+            border-radius: 100%;
+        }
+        .flag {
+            width: 34px;
+            height: 34px;
+        }
+        .tl {
+            width: 34px;
+            height: 34px;
+            padding: 8px;
+        }
+        &__link-container {
+            @include d-flex;
+        }
+        &__link {
+            text-decoration: none;
+        }
+    }
+}
