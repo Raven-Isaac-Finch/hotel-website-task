@@ -7,7 +7,7 @@ header {
   border-bottom: 1px solid #E5EBEF;
 }
 header .nav {
-  width: 80%;
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -18,7 +18,7 @@ header .nav__pages-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 200px 0 50px;
+  margin: 0 300px 0 50px;
   text-align: center;
 }
 header .nav__pages {
@@ -31,17 +31,22 @@ header .nav__pages {
   text-decoration: none;
   color: #393E43;
 }
+header .nav__pages:hover {
+  color: #393E43;
+  border-bottom: 3px solid #393E43;
+}
 header .nav .active {
   color: #FF3200;
   border-bottom: 3px solid #FF3200;
   font-weight: bold;
 }
 header .nav__currency-container {
-  margin-right: 50px;
+  margin-right: 20px;
 }
 header .nav__currency {
   border: 1px solid #0273DC;
   border-radius: 100%;
+  cursor: pointer;
 }
 header .nav .flag {
   width: 34px;
@@ -56,9 +61,159 @@ header .nav__link-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
+}
+header .nav__dropdown {
+  margin: 0 15px;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .nav__dropdown:hover {
+  color: #393E43;
+  border-bottom: 3px solid #393E43;
+}
+header .nav__dropdown-icon {
+  margin-left: 5px;
 }
 header .nav__link {
+  height: 100%;
   text-decoration: none;
+  color: #393E43;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .nav__link:hover {
+  color: #393E43;
+  border-bottom: 3px solid #393E43;
+}
+header .nav .sign-in {
+  height: 45%;
+  border: 1px solid #393E43;
+  padding: 10px 15px;
+  border-radius: 20px;
+  transition: 0.2s ease-in-out;
+}
+header .nav .sign-in:hover {
+  color: white;
+  background-color: #393E43;
+  transform: scale(1.1);
+  box-shadow: 0px 10px 13px -7px #000000, 0px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.location__header {
+  font-size: 16px;
+  color: #343A46;
+}
+.location__address {
+  width: 300px;
+  margin: 10px 0;
+  font-size: 14px;
+  color: #868E96;
+}
+.location__img {
+  width: 300px;
+  margin-bottom: 10px;
+}
+.location__btn {
+  width: 300px;
+  border-radius: 5px;
+  border: 1px solid #0273DC;
+  color: #0273DC;
+  font-weight: bold;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.location__btn:hover {
+  color: white;
+  background-color: #0273DC;
+  box-shadow: 0px 10px 13px -7px #000000, 0px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.hotel-info .highlight {
+  height: 50px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hotel-info .highlight__header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hotel-info .highlight__header h3 {
+  color: #343A46;
+  font-size: 22px;
+  margin-right: 20px;
+}
+.hotel-info .highlight__header .fa-star {
+  color: #FF3200;
+}
+.hotel-info .highlight__location {
+  display: flex;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #868E96;
+}
+.hotel-info .highlight__location .fa-location-dot {
+  margin-right: 5px;
+}
+.hotel-info .highlight__btn {
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #0273DC;
+  font-weight: bold;
+  cursor: pointer;
+}
+.hotel-info .highlight__btn:hover {
+  color: #0273DC;
+  background-color: white;
+  border: 1px solid #0273DC;
+  box-shadow: 0px 10px 13px -7px #000000, 0px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+.hotel-info .hotel-info-mid .info-container {
+  margin-bottom: 50px;
+}
+.hotel-info .hotel-info-mid .info-container .slider {
+  margin-bottom: 20px;
+}
+.hotel-info .hotel-info-mid .info-container .slider img {
+  width: 100%;
+  height: 500px;
+  border-radius: 5px;
+}
+.hotel-info .hotel-info-mid .info-container__text {
+  color: #343A46;
+  font-size: 18px;
+}
+.hotel-info .hotel-info-mid .details {
+  display: flex;
+  width: 100%;
+  height: 350px;
+  border: 1px solid #E5EBEF;
+  border-radius: 5px;
+}
+.hotel-info .hotel-info-mid .details__img-container img {
+  width: 300px;
+  height: 100%;
+  border-radius: 5px 0 0 5px;
+}
+.hotel-info .hotel-info-mid .details .details-info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 * {
@@ -66,6 +221,14 @@ header .nav__link {
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  width: 90%;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-column-gap: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

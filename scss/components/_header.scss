@@ -5,15 +5,15 @@ header {
     width: 100vw;
     height: 80px;
     @include d-flex;
-    border-bottom: 1px solid #E5EBEF;
+    border-bottom: 1px solid $clr-lg-grey;
     .nav {
-        width: 80%;
+        width: 100%;
         height: 100%;
         @include d-flex;
         &__pages-container {
             height: 100%;
             @include d-flex;
-            margin: 0 200px 0 50px;
+            margin: 0 300px 0 50px;
             text-align: center;
         }
         &__pages {
@@ -23,6 +23,10 @@ header {
             margin: 0 10px;
             text-decoration: none;
             color: $clr-dark-grey;
+            &:hover {
+                color: $clr-dark-grey;
+                border-bottom: 3px solid $clr-dark-grey;
+            }
         }
         .active {
             color: $clr-orange;
@@ -30,11 +34,12 @@ header {
             font-weight: bold;
         }
         &__currency-container {
-            margin-right: 50px;
+            margin-right: 20px;
         }
         &__currency {
             border: 1px solid $clr-blue;
             border-radius: 100%;
+            cursor: pointer;
         }
         .flag {
             width: 34px;
@@ -47,9 +52,44 @@ header {
         }
         &__link-container {
             @include d-flex;
+            height: 100%;
+        }
+        &__dropdown {
+            margin: 0 15px;
+            cursor: pointer;
+            height: 100%;
+            @include d-flex;
+            &:hover {
+                color: $clr-dark-grey;
+                border-bottom: 3px solid $clr-dark-grey;
+            }
+        }
+        &__dropdown-icon {
+            margin-left: 5px;
         }
         &__link {
+            height: 100%;
             text-decoration: none;
+            color: $clr-dark-grey;
+            margin: 0 10px;
+            @include d-flex;
+            &:hover {
+                color: $clr-dark-grey;
+                border-bottom: 3px solid $clr-dark-grey;
+            }
+        }
+        .sign-in {
+            height: 45%;
+            border: 1px solid $clr-dark-grey;
+            padding: 10px 15px;
+            border-radius: 20px;
+            transition: 0.2s ease-in-out;
+            &:hover {
+                color: white;
+                background-color: $clr-dark-grey;
+                transform: scale(1.1);
+                box-shadow: 0px 10px 13px -7px #000000, 0px 5px 15px 5px rgba(0,0,0,0);
+            }
         }
     }
 }

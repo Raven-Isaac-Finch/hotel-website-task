@@ -1,8 +1,16 @@
-@import './components/header';
+@import './components/header', './components/location', './components/hotel-info';
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-column-gap: 20px;
 }
