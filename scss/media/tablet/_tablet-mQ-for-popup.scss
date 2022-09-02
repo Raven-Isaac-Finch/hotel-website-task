@@ -4,13 +4,12 @@
 @media (max-width: $width-m) {
     .details-popup {
         $self: &;
-        width: 95%;
-        height: auto;
-        .slider {
-            img {
-                width: 100%;
-            }
-        }
+        // width: 95%;
+        // .slider {
+        //     img {
+        //         width: 100%;
+        //     }
+        // }
         &__container {
             #{ $self }__perks {
                 p {

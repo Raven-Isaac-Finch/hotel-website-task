@@ -26,11 +26,11 @@
             transform: scale(1.1);
         }
     }
-    .slider {
-        img {
-            width: 900px;
-        }
-    }
+    // .slider {
+    //     img {
+    //         width: 900px;
+    //     }
+    // }
     &__container {
         width: 90%;
         margin: 0 auto;
@@ -85,7 +85,7 @@
     &__bottom {
         @include d-flex($jc: space-between);
         width: 90%;
-        margin: 0 auto;
+        margin: 0 auto 20px;
         #{ $self }__price {
             display: flex;
             flex-direction: column;
