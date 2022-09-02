@@ -1,0 +1,126 @@
+@import '../absracts/mixins';
+@import '../absracts/variables';
+
+.details-popup {
+    $self: &;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 900px;
+    height: 965px;
+    background-color: white;
+    box-shadow: 0px 3px 20px #00000029;
+    z-index: 1;
+    .fa-circle-xmark {
+        position: absolute;
+        right: 0;
+        margin: 20px;
+        font-size: 30px;
+        color: white;
+        transition: 0.1s ease-in-out;
+        cursor: pointer;
+        &:hover {
+            color: red;
+            transform: scale(1.1);
+        }
+    }
+    .slider {
+        img {
+            width: 900px;
+        }
+    }
+    &__container {
+        width: 90%;
+        margin: 0 auto;
+        #{ $self }__text {
+            h4 {
+                font-size: 24px;
+                color: $clr-h;
+                margin: 15px 0;
+            }
+            p {
+                font-size: 16px;
+                color: $clr-h;
+                margin-bottom: 15px;
+                text-align: left;
+            }
+        }
+        #{ $self }__tags {
+            display: flex;
+            flex-wrap: wrap;
+            width: 80%;
+            margin-bottom: 15px;
+            p {
+                font-size: 16px;
+                background-color: $clr-tag-box;
+                color: $clr-tags;
+                margin: 0 5px 5px 0;
+                padding: 5px 10px;
+                width: fit-content;
+            }
+            .fa-circle-info {
+                margin-left: 3px;
+                color: $clr-tag-box;
+                background-color: $clr-tags;
+                border: 2px solid $clr-tags;
+                border-radius: 50%;
+            }
+        }
+        #{ $self }__perks {
+            font-size: 16px;
+            color: $clr-h;
+            display: flex;
+            flex-wrap: wrap;
+            height: 150px;
+            p {
+                width: 250px;
+            }
+            .fa-check {
+                margin-right: 5px;
+            }
+        }
+    }
+    &__bottom {
+        @include d-flex($jc: space-between);
+        width: 90%;
+        margin: 0 auto;
+        #{ $self }__price {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            .new-price {
+                color: $clr-blue;
+                font-size: 36px;
+                font-weight: bold;
+            }
+            .warning {
+                font-size: 14px;
+                color: $clr-dark-grey;
+            }
+        }
+        #{ $self }__btn-container {
+            button {
+                font-size: 18px;
+                width: 190px;
+                height: 50px;
+                border: none;
+                border-radius: 5px;
+                color: white;
+                background-color: $clr-blue;
+                font-weight: bold;
+                cursor: pointer;
+                &:hover {
+                    color: $clr-blue;
+                    background-color: white;
+                    border: 1px solid $clr-blue;
+                    box-shadow: 0px 10px 13px -7px #000000, 0px 5px 15px 5px rgba(0,0,0,0);
+                }
+                .fa-arrow-right-long {
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+@import '../../absracts/mixins';
+@import '../../absracts/variables';
+
+@media (max-width: $width-s) {
+    .details-popup {
+        $self: &;
+        width: 95%;
+        height: auto;
+        .slider {
+            img {
+                width: 100%;
+            }
+        }
+        &__container {
+            #{ $self }__perks {
+                p {
+                    width: 180px;
+                }
+            }
+        }
+        &__bottom {
+            margin-bottom: 20px;
+        }
+    }
+}

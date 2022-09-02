@@ -1,0 +1,29 @@
+@import '../absracts/mixins';
+@import '../absracts/variables';
+
+.additional-perks {
+    $self: &;
+    &__bottom {
+        height: 200px;
+        #{ $self }__title {
+            margin-bottom: 20px;
+            h4 {
+                font-size: 22px;
+                color: $clr-h;
+            }
+        }
+        #{ $self }__perks {
+            font-size: 16px;
+            color: $clr-h;
+            display: flex;
+            flex-wrap: wrap;
+            p {
+                margin-bottom: 10px;
+                width: 300px;
+            }
+            .fa-check {
+                margin-right: 5px;
+            }
+        }
+    }
+}

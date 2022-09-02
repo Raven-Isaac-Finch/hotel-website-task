@@ -1,4 +1,4 @@
-@import './components/header', './components/location', './components/hotel-info';
+@import './components/header', './components/location', './components/hotel-info', './components/additional-perks', './components/details-popup';
 
 * {
     margin: 0;
@@ -11,6 +11,40 @@
     width: 90%;
     margin: 50px auto;
     display: grid;
-    grid-template-columns: 25% 75%;
+    grid-template: auto / 25% 75%;
     grid-column-gap: 20px;
 }
+
+.grey-line-across {
+    width: 100%;
+    height: 1px;
+    background-color: $clr-lg-grey;
+    margin: 20px 0;
+}
+
+.cloud {
+    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+// ----- Handle Detail Page Pop-up
+.hidden {
+    transition: opacity 0.2s ease-out;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.visible {
+    opacity: 1;
+    height: 965px;
+}
+
+@import './media/tablet/tablet-mQ-for-popup', './media/tablet/tablet-mQ';
+@import './media/phone/phone-mQ-for-popup', './media/phone/phone-mQ';
