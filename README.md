@@ -1,2 +1,3 @@
 # hotel-website-task
-HTML, CSS/SCSS, Vanilla JS
+
+Hotel website with HTML, CSS/SCSS, Vanilla JS
